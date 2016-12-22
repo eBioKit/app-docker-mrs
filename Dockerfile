@@ -3,7 +3,7 @@
 # Based on ubuntu:14.04
 ############################################################
 
-# Set the base image to bgruening/galaxy-stable
+# Set the base image to ubuntu:14.04
 FROM ubuntu:14.04
 
 # File Author / Maintainer
