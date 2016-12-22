@@ -1,0 +1,30 @@
+############################################################
+# Launcher for MRS container for the eBioKit
+# This is a template, the following values must be replaced:
+#   - $$APP1_PORT$$, port number for the MRS instance
+#   - $$DATA_LOCATION$$, location for the application data
+#   - $$LOG_LOCATION$$, location for the application log
+# TODO:
+# - Galaxy logs
+############################################################
+
+version: '2'
+services:
+
+    mrs_machine:
+      image: ebiokit/mrs
+      container_name: mrs_machine
+      depends_on:
+        - mrs_data
+      volumes_from:
+        - mrs_data
+      ports:
+        - "$$APP1_PORT$$:18090"
+
+    mrs_data:
+      image: busybox
+      container_name: mrs_data
+      volumes:
+        - $$DATA_LOCATION$$:/data
+        - $$LOG_LOCATION$$:/log
+
