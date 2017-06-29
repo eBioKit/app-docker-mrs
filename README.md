@@ -5,13 +5,35 @@ This docker image is part of the eBioKit 2017 project.
 
 This docker image extends and distributes the following software:
 
-#### Galaxy project
+#### MRS
 
 - Based on [MRS project](http://mrs.cmbi.ru.nl/).
 - MRS was designed and implemented by Maarten Hekkelman at the CMBI. [Boost Software License - Version 1.0.](https://raw.githubusercontent.com/bgruening/docker-galaxy-stable/master/LICENSE).
 - Citation:
 > MRS: A fast and compact retrieval system for biological data. Hekkelman M.L., Vriend G.
 Nucleic Acids Research 2005 33(Web Server issue):W766-W769; doi:10.1093/nar/gki422. [Link](https://academic.oup.com/nar/article/33/suppl_2/W766/2505577/MRS-a-fast-and-compact-retrieval-system-for?ijkey=1hM9Po54JADYz0b&keytype=ref)
+
+## Running the Container
+
+The container is publicly available as `ebiokit/docker-mrs`. The recommended
+method for launching the container is via docker-compose.
+
+## Quickstart
+
+This procedure starts mrs in a standard virtualised environment.
+
+- Install [docker](https://docs.docker.com/engine/installation/) for your system if not previously done.
+- `docker run -it -p 18090:18090 ebiokit/docker-mrs`
+- MRS will be available at [http://localhost:18090/](http://localhost:18090/)
+
+### Logging In
+
+The default credentials in this image are below. Credentials can be changed in the docker-compose file:
+
+| Credentials |                    |
+| ---         | ------------------ |
+| Username    | `root` |
+| Password    | `123`         |
 
 ### About the eBioKit project
 

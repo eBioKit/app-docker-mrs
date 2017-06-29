@@ -1,0 +1,34 @@
+############################################################
+# Launcher for MRS container for the eBioKit
+# This is a template, the following values must be replaced:
+#   - $${INSTANCE}, name for the instance
+#   - $${ADMIN_EMAIL}, email for admin user
+#   - $${ADMIN_PASS}, email for admin user
+#   - $${APP_1_PORT_1}, port number for MRS instance
+#   - $${DATA_LOCATION}, location for the application data
+# TODO:
+# - Change admin credentials
+############################################################
+
+version: '2'
+services:
+
+    $${INSTANCE}-mrs:
+      image: ebiokit/docker-mrs
+      container_name: $${INSTANCE}-mrs
+      environment:
+        - MRS_ADMIN_EMAIL=$${ADMIN_EMAIL}
+        - MRS_ADMIN_PASSWORD=$${ADMIN_PASS}
+      depends_on:
+        - $${INSTANCE}-mrs-data
+      volumes_from:
+        - $${INSTANCE}-mrs-data
+      ports:
+        - "$${APP_1_PORT_1}:18090"
+
+    $${INSTANCE}-mrs-data:
+      image: busybox
+      container_name: $${INSTANCE}-mrs-data
+      volumes:
+        - $${DATA_LOCATION}/data:/data
+        - $${DATA_LOCATION}/log:/log
