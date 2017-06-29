@@ -15,8 +15,7 @@ Nucleic Acids Research 2005 33(Web Server issue):W766-W769; doi:10.1093/nar/gki4
 
 ## Running the Container
 
-The container is publicly available as `ebiokit/docker-mrs`. The recommended
-method for launching the container is via docker-compose.
+The container is publicly available as `ebiokit/docker-mrs`. The recommended method for launching the container is via docker-compose.
 
 ## Quickstart
 
