@@ -1,0 +1,32 @@
+[
+	{
+		"name": "INSTANCE_NAME",
+		"label": "Instance name",
+		"type": "text",
+		"description": "The name for the new instance"
+	},
+	{
+		"name": "INSTANCE_PORT",
+		"label": "Port number",
+		"type": "number",
+		"description": "The port number for the new instance"
+	},
+	{
+		"name": "INSTANCE_URL",
+		"label": "URL",
+		"type": "text",
+		"description": "The URL for the new instance"
+	},
+	{
+		"name": "ADMIN_EMAIL",
+		"label": "Admin email",
+		"type": "email",
+		"description": "The email for the admin account."
+	},
+	{
+		"name": "ADMIN_PASS",
+		"label": "Password",
+		"type": "password",
+		"description": "The password for the admin account."
+	}
+]

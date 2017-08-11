@@ -1,0 +1,9 @@
+{
+	"service":"mrs",
+	"version":"0.1",
+	"title":"MRS",
+	"description":"Mrs service",
+	"categories":"databases",
+	"website":"/mrs",
+	"dockers" : "ebiokit/docker-mrs,busybox"
+}
