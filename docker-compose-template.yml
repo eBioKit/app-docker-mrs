@@ -29,5 +29,5 @@ services:
       image: busybox
       container_name: $${INSTANCE_NAME}-mrs-data
       volumes:
-        - /data/$${INSTANCE_NAME}/data:/data
-        - /data/$${INSTANCE_NAME}/log:/log
+        - /data/$${INSTANCE_NAME}-data/data:/data
+        - /data/$${INSTANCE_NAME}-data/log:/log
