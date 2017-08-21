@@ -6,7 +6,7 @@
 		"description": "The name for the new instance"
 	},
 	{
-		"name": "INSTANCE_PORT",
+		"name": "INSTANCE_PORT_1",
 		"label": "Port number",
 		"type": "number",
 		"description": "The port number for the new instance"

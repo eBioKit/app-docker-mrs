@@ -2,7 +2,7 @@
 # Launcher for MRS container for the eBioKit
 # This is a template, the following values must be replaced:
 #   - $${INSTANCE_NAME}, name for the instance
-#   - $${INSTANCE_PORT}, port number for MRS instance
+#   - $${INSTANCE_PORT_1}, port number for MRS instance
 #   - $${ADMIN_EMAIL}, email for admin user
 #   - $${ADMIN_PASS}, email for admin user
 # TODO:
@@ -23,7 +23,7 @@ services:
       volumes_from:
         - $${INSTANCE_NAME}-mrs-data
       ports:
-        - "$${INSTANCE_PORT}:18090"
+        - "$${INSTANCE_PORT_1}:18090"
 
     $${INSTANCE_NAME}-mrs-data:
       image: busybox
