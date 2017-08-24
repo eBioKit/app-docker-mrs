@@ -2,8 +2,8 @@
 	"service":"mrs",
 	"version":"0.1",
 	"title":"MRS",
-	"description":"Mrs service",
-	"categories":"databases",
+	"description":"MRS is a search engine for biological and medical databanks. Use it to search well over a terabyte of indexed text.",
+	"categories":"databases,search",
 	"website":"/mrs",
 	"dockers" : "ebiokit/docker-mrs,busybox"
 }
