@@ -1,5 +1,5 @@
 ############################################################
-# Launcher for MRS container for the eBioKit
+# Launcher for MRS container
 # This is a template, the following values must be replaced:
 #   - $${INSTANCE_NAME}, name for the instance
 #   - $${INSTANCE_PORT_1}, port number for MRS instance
@@ -13,7 +13,7 @@ version: '2'
 services:
 
     $${INSTANCE_NAME}-mrs:
-      image: ebiokit/docker-mrs
+      image: fikipollo/mrs
       container_name: $${INSTANCE_NAME}-mrs
       environment:
         - MRS_ADMIN_EMAIL=$${ADMIN_EMAIL}
