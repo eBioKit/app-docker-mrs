@@ -14,13 +14,6 @@
 		"default": 18090
 	},
 	{
-		"name": "INSTANCE_URL",
-		"label": "URL",
-		"type": "text",
-		"description": "The URL for the new instance",
-		"default": "/mrs"
-	},
-	{
 		"name": "ADMIN_EMAIL",
 		"label": "Admin email",
 		"type": "email",
