@@ -1,9 +1,9 @@
 {
 	"service":"mrs",
-	"version":"0.1",
+	"version":"0.9",
 	"title":"MRS",
 	"description":"MRS is a search engine for biological and medical databanks. Use it to search well over a terabyte of indexed text.",
 	"categories":"databases,search,web-based",
 	"website":"http://mrs.cmbi.ru.nl/",
-	"dockers" : "fikipollo/mrs,busybox"
+	"dockers" : "fikipollo/mrs:0.9,busybox"
 }

@@ -5,15 +5,13 @@
 #   - $${INSTANCE_PORT_1}, port number for MRS instance
 #   - $${ADMIN_EMAIL}, email for admin user
 #   - $${ADMIN_PASS}, email for admin user
-# TODO:
-# - Change admin credentials
 ############################################################
 
 version: '2'
 services:
 
     $${INSTANCE_NAME}-mrs:
-      image: fikipollo/mrs
+      image: fikipollo/mrs:0.9
       container_name: $${INSTANCE_NAME}-mrs
       environment:
         - MRS_ADMIN_EMAIL=$${ADMIN_EMAIL}
