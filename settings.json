@@ -11,7 +11,7 @@
 		"label": "Port number",
 		"type": "number",
 		"description": "The port number for the new instance",
-		"default": 18090
+		"default": 8095
 	},
 	{
 		"name": "ADMIN_EMAIL",
