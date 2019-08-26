@@ -17,15 +17,15 @@ services:
         - MRS_ADMIN_EMAIL=${ADMIN_EMAIL}
         - MRS_ADMIN_PASSWORD=${ADMIN_PASS}
       depends_on:
-        - $${INSTANCE_NAME}-mrs-data
+        - $${INSTANCE_NAME}-data
       volumes_from:
-        - $${INSTANCE_NAME}-mrs-data
+        - $${INSTANCE_NAME}-data
       ports:
         - "${INSTANCE_PORT_1}:18090"
 
-    $${INSTANCE_NAME}-mrs-data:
+    $${INSTANCE_NAME}-data:
       image: busybox
-      container_name: $${INSTANCE_NAME}-mrs-data
+      container_name: $${INSTANCE_NAME}-data
       volumes:
         - ${DATA_LOCATION}/$${INSTANCE_NAME}-data/data:/data
         - ${DATA_LOCATION}/$${INSTANCE_NAME}-data/log:/log
