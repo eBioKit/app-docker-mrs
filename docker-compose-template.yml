@@ -1,5 +1,5 @@
 ############################################################
-# Launcher for MRS container
+# Launcher for MRS container for the eBioKit
 # This is a template, the following values must be replaced:
 #   - $${INSTANCE_NAME}, name for the instance
 #   - $${INSTANCE_PORT_1}, port number for MRS instance
@@ -14,18 +14,18 @@ services:
       image: fikipollo/mrs:0.9
       container_name: $${INSTANCE_NAME}-mrs
       environment:
-        - MRS_ADMIN_EMAIL=$${ADMIN_EMAIL}
-        - MRS_ADMIN_PASSWORD=$${ADMIN_PASS}
+        - MRS_ADMIN_EMAIL=${ADMIN_EMAIL}
+        - MRS_ADMIN_PASSWORD=${ADMIN_PASS}
       depends_on:
         - $${INSTANCE_NAME}-mrs-data
       volumes_from:
         - $${INSTANCE_NAME}-mrs-data
       ports:
-        - "$${INSTANCE_PORT_1}:18090"
+        - "${INSTANCE_PORT_1}:18090"
 
     $${INSTANCE_NAME}-mrs-data:
       image: busybox
       container_name: $${INSTANCE_NAME}-mrs-data
       volumes:
-        - /data/$${INSTANCE_NAME}-data/data:/data
-        - /data/$${INSTANCE_NAME}-data/log:/log
+        - ${DATA_LOCATION}/$${INSTANCE_NAME}-data/data:/data
+        - ${DATA_LOCATION}/$${INSTANCE_NAME}-data/log:/log
